@@ -1,0 +1,28 @@
+# Kernel module build artifacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+*.tmp
+*.cmd
+*.unsigned
+
+# Build directories (if used)
+*.ko.*
+*.dwo
+modules.order
+Module.symvers
+.tmp_versions/
+.build/
+
+# Backups and editor files
+*~
+*.swp
+*.bak
+
+# Logs
+*.log
+dmesg.txt

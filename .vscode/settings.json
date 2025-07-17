@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.go": "go",
+        "moduleparam.h": "c",
+        "stat.h": "c",
+        "iosfwd": "cpp",
+        "printk.h": "c",
+        "module.h": "c"
+    }
+}
