@@ -4,14 +4,18 @@
             "name": "Linux Kernel x86_64",
             "includePath": [
                 "${workspaceFolder}/**",
+                "/usr/src/linux-headers-6.8.0-60-generic",
                 "/usr/src/linux-headers-6.8.0-60-generic/include",
+                "/usr/src/linux-headers-6.8.0-60-generic/include/linux",
                 "/usr/src/linux-headers-6.8.0-60-generic/include/uapi",
                 "/usr/src/linux-headers-6.8.0-60-generic/include/generated",
                 "/usr/src/linux-headers-6.8.0-60-generic/include/generated/uapi",
                 "/usr/src/linux-headers-6.8.0-60-generic/arch/x86/include",
                 "/usr/src/linux-headers-6.8.0-60-generic/arch/x86/include/generated",
                 "/usr/src/linux-headers-6.8.0-60-generic/arch/x86/include/uapi",
-                "/usr/src/linux-headers-6.8.0-60-generic/arch/x86/include/generated/uapi"
+                "/usr/src/linux-headers-6.8.0-60-generic/arch/x86/include/generated/uapi",
+                "/usr/src/linux-headers-6.8.0-60-generic/include/generated/autoconf.h",
+                "/usr/src/linux-headers-6.8.0-60-generic/"
             ],
             "defines": [
                 "__KERNEL__",
