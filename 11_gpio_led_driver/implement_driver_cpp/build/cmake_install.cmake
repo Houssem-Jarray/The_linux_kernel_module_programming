@@ -1,4 +1,4 @@
-# Install script for directory: /home/houssem/Desktop/learn/embedded_linux/device_driver/gpio_led_driver/implement_driver_cpp
+# Install script for directory: /home/houssem/Desktop/learn/embedded_linux/The_linux_kernel_module_programming_guide/workspace/11_gpio_led_driver/implement_driver_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/houssem/Desktop/learn/embedded_linux/device_driver/gpio_led_driver/implement_driver_cpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/houssem/Desktop/learn/embedded_linux/The_linux_kernel_module_programming_guide/workspace/11_gpio_led_driver/implement_driver_cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

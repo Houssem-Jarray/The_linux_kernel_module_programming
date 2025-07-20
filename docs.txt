@@ -1,0 +1,2 @@
+to write into the file of the module :
+echo "hello, houssem!" | sudo tee /proc/buffer1k > /dev/null

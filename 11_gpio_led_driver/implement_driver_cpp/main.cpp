@@ -5,7 +5,7 @@
 
 int main() {
     try {
-        GPIO led(19); // Use GPIO pin 17
+        GPIO led(19); // Use GPIO pin 19
 
         std::cout << "Turning LED ON...\n";
         led.on();
@@ -16,7 +16,7 @@ int main() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
 
         std::cout << "Toggling LED 3 times with 300ms delay...\n";
-        led.toggle(3, 300);
+        led.toggle(20, 1000);
     } catch (const std::exception& e) {
         std::cerr << "GPIO error: " << e.what() << '\n';
     }
