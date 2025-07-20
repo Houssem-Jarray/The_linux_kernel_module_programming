@@ -28,38 +28,53 @@ static unsigned long procfs_buffer_size = 0;
 static ssize_t procfile_read(struct file *filep, char __user *buffer, size_t length, loff_t *offset)
 {
     char s[13] = "HelloWorld\n";
-    int len = sizeof(s);
-    ssize_t ret = len;
+    int len = strlen(s);
 
-    if (*offset >= len || copy_to_user(buffer, s, len))
+    if (*offset > 0)
+    {
+        return 0; // EOF
+    }
+
+    if (copy_to_user(buffer, s, len))
     {
         pr_info("copy to user failed\n");
-        ret = 0;
+        return -EFAULT;
     }
-    else
-    {
-        pr_info("procfile read %s\n", filep->f_path.dentry->d_name.name);
-        *offset += len;
-    }
-    return ret;
+    *offset = len;
+    pr_info("procfile read %s\n", s);
+    return len;
 }
 
 /* This is function is called with the /proc file is written */
 static ssize_t procfile_write(struct file *file, const char __user *buffer, size_t len, loff_t *off)
 {
-    procfs_buffer_size = len;
+    if (len >= PROCFS_MAX_SIZE)
+        procfs_buffer_size = PROCFS_MAX_SIZE - 1;
+    else
+        procfs_buffer_size = len;
+
+    if (copy_from_user(procfs_buffer, buffer, procfs_buffer_size))
+        return -EFAULT;
+
+    procfs_buffer[procfs_buffer_size] = '\0';
+    pr_info("procfile write: %s\n", procfs_buffer);
+
+    return procfs_buffer_size;
 }
+
 #ifdef HAVE_PROC_OPS
 static const struct proc_ops proc_file_fops = {
     .proc_read = procfile_read,
+    .proc_write = procfile_write,
 };
 #else
 static const struct file_operations proc_file_fops = {
     .read = procfile_read,
+    .write = procfile_write,
 }
 #endif
 
-static int __init procfs1_init(void)
+static int __init procfs2_init(void)
 {
     our_proc_file = proc_create(PROCFS_NAME, 0644, NULL, &proc_file_fops);
     if (NULL == our_proc_file)
@@ -71,11 +86,14 @@ static int __init procfs1_init(void)
     return 0;
 }
 
-static void __exit procfs1_exit(void)
+static void __exit procfs2_exit(void)
 {
     proc_remove(our_proc_file);
     pr_info("/proc/%s : removed\n", PROCFS_NAME);
     return;
 }
-module_init(procfs1_init);
-module_exit(procfs1_exit);
+module_init(procfs2_init);
+module_exit(procfs2_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("HOUSSEM JARRAY");
