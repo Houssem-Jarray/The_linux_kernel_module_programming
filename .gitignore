@@ -17,7 +17,7 @@ modules.order
 Module.symvers
 .tmp_versions/
 .build/
-
+**/build/
 # Backups and editor files
 *~
 *.swp

@@ -19,7 +19,8 @@ This workspace contains exercises implemented while following the **"Linux Kerne
 | `07_functions_available_to_modules` | Lists or demonstrates various kernel symbols and exported functions accessible to modules. |
 | `08_chardev` | A basic character device driver using `register_chrdev()`. |
 | `09_hello_world_with__proc` | Adds a `/proc` file to interact with user space. Introduces `proc_create`, `proc_ops`, and reading from `/proc`. |
-
+| `10_hello_world_read_write_with_proc` | Adds a `/proc` file to interact with user space. Introduces `proc_create`, `proc_ops`, reading from `/proc`, and writing into the `/proc`. |
+| `11_gpio_led_driver` | Adds a `/proc` file to interact with user space to handle gpio drivers. With an user-space example to toggle a led. |
 ---
 
 ## How to Build a Module
