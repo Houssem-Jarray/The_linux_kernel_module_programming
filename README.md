@@ -23,6 +23,8 @@ This workspace contains exercises implemented while following the **"Linux Kerne
 | `11_gpio_led_driver` | Adds a `/proc` file to interact with user space to handle gpio drivers. With an user-space example to toggle a led. |
 | `12_manage_proc_file_with_standard_filesystem` | Demonstrates how to use standard file operations (`read`, `write`, `open`, `release`) with `/proc` files. Builds a 2KB buffer for data exchange between user space and kernel. |
 | `13_manage_proc_fs_with_seq_file` | Demonstrates how to manage the proc fs using the sequence fs with operations like (`start`, `stop`, `next`, `show`) with `/proc` files. for data read only from kernel space to user space. |
+| `14_interacte_with_module_using_sysfs/` | Demonstrates how to interact with kernel modules using the sysfs interface (`/sys`), allowing structured access to kernel objects and their attributes. Supports both reading and writing between user space and kernel space, enabling configuration and monitoring of kernel module parameters at runtime. |
+
 ---
 
 ## How to Build a Module
