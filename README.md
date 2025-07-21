@@ -22,6 +22,7 @@ This workspace contains exercises implemented while following the **"Linux Kerne
 | `10_hello_world_read_write_with_proc` | Adds a `/proc` file to interact with user space. Introduces `proc_create`, `proc_ops`, reading from `/proc`, and writing into the `/proc`. |
 | `11_gpio_led_driver` | Adds a `/proc` file to interact with user space to handle gpio drivers. With an user-space example to toggle a led. |
 | `12_manage_proc_file_with_standard_filesystem` | Demonstrates how to use standard file operations (`read`, `write`, `open`, `release`) with `/proc` files. Builds a 2KB buffer for data exchange between user space and kernel. |
+| `13_manage_proc_fs_with_seq_file` | Demonstrates how to manage the proc fs using the sequence fs with operations like (`start`, `stop`, `next`, `show`) with `/proc` files. for data read only from kernel space to user space. |
 ---
 
 ## How to Build a Module
