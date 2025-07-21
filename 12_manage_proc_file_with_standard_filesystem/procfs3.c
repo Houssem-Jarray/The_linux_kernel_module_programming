@@ -83,17 +83,25 @@ static struct file_operations file_ops_4_our_proc_file = {
 
 static int __init procfs3_init(void)
 {
-    pr_info("Loading the module procfs3");
+    pr_info("Loading the module procfs3\n");
+
     our_proc_file = proc_create(PROCFS_ENTRY_FILENAME, 0644, NULL, &file_ops_4_our_proc_file);
+    if (!our_proc_file) {
+        pr_err("procfs3: Failed to create /proc/%s\n", PROCFS_ENTRY_FILENAME);
+        return -ENOMEM;
+    }
+
     return 0;
 }
-static void __exit procfs_exit(void)
+
+static void __exit procfs3_exit(void)
 {
-    pr_info("Exiting the procfs3 module");
+    pr_info("Exiting the procfs3 module\n");
     proc_remove(our_proc_file);
 }
+
 module_init(procfs3_init);
-module_exit(procfs_exit);
+module_exit(procfs3_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("HOUSSEM JARRAY");
