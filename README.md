@@ -25,6 +25,7 @@ This workspace contains exercises implemented while following the **"Linux Kerne
 | `13_manage_proc_fs_with_seq_file` | Demonstrates how to manage the proc fs using the sequence fs with operations like (`start`, `stop`, `next`, `show`) with `/proc` files. for data read only from kernel space to user space. |
 | `14_interacte_with_module_using_sysfs/` | Demonstrates how to interact with kernel modules using the sysfs interface (`/sys`), allowing structured access to kernel objects and their attributes. Supports both reading and writing between user space and kernel space, enabling configuration and monitoring of kernel module parameters at runtime. |
 `15_talking_to_device_files/` | Demonstrates how to communicate with kernel modules using standard file operations (`open`, `read`, `write`, `close`) via device files in `/dev`. This lab covers creating character device drivers, registering them with the kernel, and accessing them from user space through file descriptors, enabling raw data exchange and control. |
+`16_talking_to_device_files_with_using_atomic_control_access/` | Demonstrates how to communicate with kernel modules using standard file operations (`open`, `read`, `write`, `close`) via device files in `/dev`. with contronl the access to the device file with atomic. |
 ---
 
 ## How to Build a Module

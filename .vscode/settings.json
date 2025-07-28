@@ -5,6 +5,7 @@
         "stat.h": "c",
         "iosfwd": "cpp",
         "printk.h": "c",
-        "module.h": "c"
+        "module.h": "c",
+        "device.h": "c"
     }
 }
