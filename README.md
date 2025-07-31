@@ -28,6 +28,8 @@ This workspace contains exercises implemented while following the **"Linux Kerne
 `16_talking_to_device_files_with_using_atomic_control_access/` | Demonstrates how to communicate with kernel modules using standard file operations (`open`, `read`, `write`, `close`) via device files in `/dev`. with contronl the access to the device file with atomic. |
 `17_blocking_processes_and_threads/` | Demonstrates how to use blocking processes and threads. if several processes try to open it
 at the same time, they will block until the first one closes it. |
+`18_completion/` | Demonstrates how to use completions to block a process until another process signals that a task is complete. |
+
 ---
 
 ## How to Build a Module
