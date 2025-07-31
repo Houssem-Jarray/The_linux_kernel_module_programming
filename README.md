@@ -29,6 +29,7 @@ This workspace contains exercises implemented while following the **"Linux Kerne
 `17_blocking_processes_and_threads/` | Demonstrates how to use blocking processes and threads. if several processes try to open it
 at the same time, they will block until the first one closes it. |
 `18_completion/` | Demonstrates how to use completions to block a process until another process signals that a task is complete. |
+`19_mutex/` | Demonstrates how to use DEFINE_MUTEX macro to create a simple mutex example for kernel module. |
 
 ---
 

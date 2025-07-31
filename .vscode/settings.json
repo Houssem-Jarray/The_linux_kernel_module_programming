@@ -6,6 +6,9 @@
         "iosfwd": "cpp",
         "printk.h": "c",
         "module.h": "c",
-        "device.h": "c"
+        "device.h": "c",
+        "chrono": "c",
+        "random": "c",
+        "type_traits": "c"
     }
 }
