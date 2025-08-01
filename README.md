@@ -31,6 +31,7 @@ at the same time, they will block until the first one closes it. |
 `18_completion/` | Demonstrates how to use completions to block a process until another process signals that a task is complete. |
 `19_mutex/` | Demonstrates how to use DEFINE_MUTEX macro to create a simple mutex example for kernel module. |
 `20_read_write_locks/` | A simple read/write lock example for kernel module |
+`21_replacement/` | Send output to the tty we're running on, regardless if it is through X11, telnet, etc. We do this by printing the string to the tty associated with the current task.|
 
 ---
 
