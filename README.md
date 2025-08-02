@@ -33,6 +33,7 @@ at the same time, they will block until the first one closes it. |
 `20_read_write_locks/` | A simple read/write lock example for kernel module |
 `21_replacement/` | Send output to the tty we're running on, regardless if it is through X11, telnet, etc. We do this by printing the string to the tty associated with the current task.|
 `22_Flashing_keyboard_LEDs/` | Blink keyboard leds until the module is unloaded.|
+`23_led_example/` | Character device driver implemented using a dedicated struct to encapsulate device-related members and state (e.g., device number, class, GPIO pin).|
 ---
 
 ## How to Build a Module
